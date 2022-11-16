@@ -9,5 +9,7 @@ package pe.com.sistemamoda.pruebas;
  * @author Familia
  */
 public class prueba_Sanchez {
-    
+    public static void main(String[]args){
+        System.out.println("No nos jale profe");
+    }
 }
