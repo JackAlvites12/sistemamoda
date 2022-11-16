@@ -9,5 +9,7 @@ package pe.com.sistemamoda.pruebas;
  * @author GUILLERMO
  */
 public class pruebaCarhuamaca {
-    
+    public static void main(String[]args){
+        System.out.println("Hello, prosor");
+    }  
 }
