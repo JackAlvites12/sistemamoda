@@ -9,5 +9,5 @@ package pe.com.sistemamoda.pruebas;
  * @author GoodNights
  */
 public class Prueba_Morales {
-    miguel el real rapta niñas
+    
 }
