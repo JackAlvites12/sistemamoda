@@ -9,7 +9,5 @@ package pe.com.sistemamoda.pruebas;
  * @author GoodNights
  */
 public class Prueba_Morales {
-    private class{
-    }
     
 }
