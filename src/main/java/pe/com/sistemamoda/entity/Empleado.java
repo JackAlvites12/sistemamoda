@@ -19,22 +19,27 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Entity(name="Comprobante")
-@Table(name="t_comprobante")
-public class Comprobante implements Serializable{
-     private static final long serialVersionUID=1L;
-     
+@Entity(name="Empleado")
+@Table(name="t_empleado")
+public class Empleado implements Serializable{
+    private static final long serialVersionUID=1L;
+    
+    
     @Id
-    @Column(name="idcomprobante")
+    @Column(name="idempleado")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long codigo;
-    @Column(name="tipo")
-    private String tipo;
-    @Column(name="numero")
-    private long numero;
+    @Column(name="nombre")
+    private String nombre;
+    @Column(name="correo")
+    private String correo;
+    @Column(name="contrasenia")
+    private String contrasenia;
     @Column(name="estado")
     private boolean estado;
+    
     @ManyToOne
-    @JoinColumn(name="idusuario", nullable=false)
-    private Usuario usuario;
+    @JoinColumn(name="idrol", nullable=false)
+    private Rol rol;
+    
 }

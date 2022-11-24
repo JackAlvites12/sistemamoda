@@ -35,11 +35,11 @@ public class Venta implements Serializable{
     private boolean estado;
     
     @ManyToOne
-    @JoinColumn(name="idcarrito", nullable=false)
-    private Carrito carrito;
+    @JoinColumn(name="idcliente", nullable=false)
+    private Cliente cliente;
     
     @ManyToOne
-    @JoinColumn(name="idcomprobante", nullable=false)
-    private Comprobante comprobante;
+    @JoinColumn(name="idempleado", nullable=false)
+    private Empleado empleado;
     
 }

@@ -12,45 +12,45 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pe.com.sistemamoda.entity.Carrito;
-import pe.com.sistemamoda.service.CarritoService;
+import pe.com.sistemamoda.entity.DetalleVenta;
+import pe.com.sistemamoda.service.DetalleVentaService;
 
 @RestController
-@RequestMapping("/carrito")
-public class CarritoRestController {
+@RequestMapping("/detalleventa")
+public class DetalleVentaRestController {
     @Autowired
-    private CarritoService carritoService;
+    private DetalleVentaService carritoService;
     
     @GetMapping
-    public List<Carrito> findAll(){
+    public List<DetalleVenta> findAll(){
         return carritoService.findAll();
     }
     
     @GetMapping("/custom")
-    public List<Carrito> findAllCustom(){
+    public List<DetalleVenta> findAllCustom(){
         return carritoService.findAllCustom();
     }
     
     @GetMapping("/{id}")
-    public Optional<Carrito> findById(@PathVariable Long id){
+    public Optional<DetalleVenta> findById(@PathVariable Long id){
         return carritoService.findById(id);
     }
     
     @PostMapping
-    public Carrito add(@RequestBody Carrito ca){
+    public DetalleVenta add(@RequestBody DetalleVenta ca){
         return carritoService.add(ca);
     }
     
     @PutMapping("/{id}")
-    public Carrito update(@PathVariable long id, @RequestBody Carrito ca){
+    public DetalleVenta update(@PathVariable long id, @RequestBody DetalleVenta ca){
         ca.setCodigo(id);
         return carritoService.update(ca);
     }
     
     @DeleteMapping("/{id}")
-    public Carrito delete(@PathVariable long id){
-        Carrito objcarrito=new Carrito();
+    public DetalleVenta delete(@PathVariable long id){
+        DetalleVenta objcarrito=new DetalleVenta();
         objcarrito.setEstado(false);
-        return carritoService.delete(Carrito.builder().codigo(id).build());
+        return carritoService.delete(DetalleVenta.builder().codigo(id).build());
     }
 }

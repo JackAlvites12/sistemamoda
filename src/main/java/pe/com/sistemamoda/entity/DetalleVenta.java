@@ -19,29 +19,25 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Entity(name="Almacen")
-@Table(name="t_almacen")
-public class Almacen implements Serializable{
+@Entity(name="DetalleVenta")
+@Table(name="t_detalleventa")
+public class DetalleVenta implements Serializable{
     private static final long serialVersionUID=1L;
     
-    
     @Id
-    @Column(name="idalmacen")
+    @Column(name="idventdet")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long codigo;
-    @Column(name="stock")
-    private double stock;
-    @Column(name="g_entrada")
-    private String g_entrada;
-    @Column(name="g_salida")
-    private String g_salida;
+    private long codigo; 
+    @Column(name="cantidad")
+    private double cantidad;   
+    @Column(name="total")
+    private double total;    
     @Column(name="estado")
     private boolean estado;
     
     @ManyToOne
     @JoinColumn(name="idventa", nullable=false)
     private Venta venta;
-    
     
     @ManyToOne
     @JoinColumn(name="idprenda", nullable=false)
