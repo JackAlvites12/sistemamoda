@@ -1,4 +1,3 @@
-
 package pe.com.sistemamoda.service;
 
 import java.util.List;
@@ -6,7 +5,7 @@ import java.util.Optional;
 import pe.com.sistemamoda.entity.DetalleVenta;
 
 
-public interface DetalleVentaService {
+ public interface DetalleVentaService {
     //Muestra todas las categorias
     public List<DetalleVenta> findAll();
     //Muestra sólo los habilitados 

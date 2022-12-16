@@ -1,4 +1,3 @@
-
 package pe.com.sistemamoda.service;
 
 import java.util.List;
@@ -18,5 +17,5 @@ public interface VentaService {
     //Para Actualizar
     public Venta update(Venta v);
     //Para Eliminar
-    public Venta delete(Venta v);
+    public Venta delete(Venta v); 
 }
